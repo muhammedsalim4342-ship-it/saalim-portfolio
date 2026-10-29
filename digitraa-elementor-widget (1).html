@@ -1,0 +1,308 @@
+<!-- ===================================================================
+ DIGITRAA | Cinematic Digital Marketing Portfolio
+ Paste this whole block into ONE Elementor "HTML" widget (Elementor Free).
+ SEO title / meta description (set in your SEO plugin or page settings):
+   Title: Digital Marketer in Calicut | DIGITRAA
+   Description: Explore DIGITRAA, a digital marketing portfolio focused on social media marketing, SEO, content strategy, online advertising and creative digital experiences in Calicut.
+=================================================================== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<!-- Social/OG metadata is best set in your SEO plugin; this structured data helps search engines. -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"DIGITRAA","description":"Digital marketing portfolio: social media marketing, SEO, content strategy, online advertising and video editing in Calicut.","areaServed":"Calicut, Kerala, India","url":"https://YOUR-DOMAIN.com/"}
+</script>
+
+<style>
+/* ============ SCOPED STYLES (everything lives under #digitraa-site) ============ */
+#digitraa-site{--bg:#050505;--red:#E10600;--ch:#141414;--gr:#2a2a2a;--tx:#f4f4f2;--mu:#a8a8a4;
+ position:relative;background:var(--bg);color:var(--tx);font:400 1.05rem/1.65 "Helvetica Neue",Arial,sans-serif;
+ overflow-x:clip;isolation:isolate}
+#digitraa-site *,#digitraa-site *::before,#digitraa-site *::after{box-sizing:border-box}
+#digitraa-site h1,#digitraa-site h2,#digitraa-site h3,#digitraa-site .logo{font-family:Sora,"Arial Narrow",Arial,sans-serif;margin:0;font-weight:800;letter-spacing:-.04em;line-height:.95;text-transform:uppercase}
+#digitraa-site p{margin:0 0 1em;max-width:62ch}
+#digitraa-site a{color:inherit}
+#digitraa-site :focus-visible{outline:2px solid var(--red);outline-offset:4px}
+/* film grain + light leaks */
+#digitraa-site::before{content:"";position:fixed;inset:0;z-index:50;pointer-events:none;opacity:.07;
+ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+#digitraa-site .leak{position:absolute;width:60vw;height:60vw;border-radius:50%;background:radial-gradient(circle,rgba(225,6,0,.28),transparent 65%);filter:blur(30px);pointer-events:none;z-index:-1}
+#dg-fx{position:fixed;inset:0;width:100%;height:100%;z-index:40;pointer-events:none}
+/* NAV */
+#digitraa-site .nav{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem clamp(1rem,4vw,3rem);background:linear-gradient(#050505ee,#05050500)}
+#digitraa-site .logo{font-size:1.15rem;text-decoration:none;color:var(--tx)}
+#digitraa-site .logo b{color:var(--red)}
+#digitraa-site .nav ul{display:flex;gap:clamp(.8rem,2.2vw,2rem);list-style:none;margin:0;padding:0;overflow-x:auto}
+#digitraa-site .nav a.l{font-size:.8rem;text-decoration:none;color:var(--mu);letter-spacing:.06em;padding:.3rem 0;border-bottom:1px solid transparent;transition:.25s}
+#digitraa-site .nav a.l:hover{color:var(--tx);border-color:var(--red)}
+/* HERO (sticky stage inside a taller wrapper: page still scrolls normally) */
+#digitraa-site .hero{position:relative;height:100vh}
+#digitraa-site.js .hero{height:170vh}
+#digitraa-site .stage{position:relative;height:100vh;display:flex;flex-direction:column;justify-content:center;padding:6rem clamp(1rem,4vw,3rem) 3rem;overflow:hidden}
+#digitraa-site.js .stage{position:sticky;top:0}
+#digitraa-site .tag{font-size:.78rem;letter-spacing:.22em;color:var(--red);margin-bottom:1.6rem}
+#digitraa-site h1{font-size:clamp(2.5rem,8.4vw,8.4rem);position:relative;z-index:2;text-shadow:0 0 40px #050505}
+#digitraa-site h1 .ln{display:block}
+#digitraa-site h1 .ch{display:inline-block;will-change:transform}
+#digitraa-site h1 .ln:nth-child(2){color:transparent;-webkit-text-stroke:1.5px var(--tx)}
+#digitraa-site .hero-copy{position:relative;z-index:2;max-width:560px;margin-top:2rem;color:var(--mu)}
+#digitraa-site .btns{display:flex;flex-wrap:wrap;gap:1rem;position:relative;z-index:2}
+#digitraa-site .btn{display:inline-block;padding:1rem 1.8rem;font:600 .8rem Sora,Arial,sans-serif;letter-spacing:.14em;text-decoration:none;border:1px solid var(--red);transition:.3s}
+#digitraa-site .btn.p{background:var(--red);color:#fff}
+#digitraa-site .btn.p:hover{background:#fff;color:#050505;border-color:#fff}
+#digitraa-site .btn.s:hover{background:var(--red);color:#fff}
+/* hero workspace art (CSS only; add a photo via data-img) */
+#digitraa-site .ws{position:absolute;right:-4vw;bottom:6vh;width:min(46vw,640px);aspect-ratio:16/10;opacity:.42;z-index:1;transform:perspective(900px) rotateY(-18deg) rotateX(4deg);
+ -webkit-mask-image:linear-gradient(90deg,transparent,#000 40%);mask-image:linear-gradient(90deg,transparent,#000 40%)}
+#digitraa-site .scr{position:absolute;border:1px solid var(--gr);background:linear-gradient(160deg,#1a1a1a,#0b0b0b);overflow:hidden}
+#digitraa-site .scr i{position:absolute;bottom:0;width:8%;background:var(--red);opacity:.85}
+#digitraa-site .scr:nth-child(1){inset:8% 38% 30% 0}
+#digitraa-site .scr:nth-child(2){inset:0 0 38% 46%}
+#digitraa-site .scr:nth-child(3){inset:52% 14% 0 22%}
+#digitraa-site .ws .streak{position:absolute;height:2px;width:55%;background:linear-gradient(90deg,transparent,var(--red));box-shadow:0 0 14px var(--red)}
+#digitraa-site .scroll-hint{position:absolute;bottom:1.2rem;left:clamp(1rem,4vw,3rem);font-size:.7rem;letter-spacing:.2em;color:var(--mu);z-index:2}
+/* SECTIONS */
+#digitraa-site section.sec{position:relative;padding:clamp(5rem,12vw,10rem) clamp(1rem,4vw,3rem)}
+#digitraa-site .sec h2{font-size:clamp(2.2rem,6.4vw,6rem);margin-bottom:2.5rem}
+#digitraa-site .wrap{max-width:1240px;margin:0 auto}
+#digitraa-site .word{display:inline-block}
+#digitraa-site .note{border-left:2px solid var(--red);padding-left:1rem;color:var(--mu);font-size:.95rem}
+/* reveal states only when JS is active, so content stays visible without JS */
+#digitraa-site.js .word{opacity:0;transform:translate(var(--x),-60px) rotate(var(--r));transition:transform .9s cubic-bezier(.2,1.5,.4,1) var(--d),opacity .5s var(--d)}
+#digitraa-site.js .in .word,#digitraa-site.js .word.in{opacity:1;transform:none}
+#digitraa-site.js .rv{opacity:0;transform:translateY(70px) skewY(3deg);transition:transform .9s cubic-bezier(.2,.9,.2,1) var(--d,0s),opacity .7s var(--d,0s)}
+#digitraa-site.js .rv.in{opacity:1;transform:none}
+/* ABOUT */
+#digitraa-site .about{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(2rem,6vw,6rem);align-items:start}
+/* SERVICES: wide ruled rows */
+#digitraa-site .svc{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:2rem;padding:2rem 0;border-top:1px solid var(--gr);transition:.4s}
+#digitraa-site .svc:last-child{border-bottom:1px solid var(--gr)}
+#digitraa-site .svc h3{font-size:clamp(1.4rem,3.4vw,2.8rem);transition:.4s}
+#digitraa-site .svc p{color:var(--mu);margin:0}
+#digitraa-site .svc:hover{padding-left:1.2rem;background:linear-gradient(90deg,rgba(225,6,0,.12),transparent)}
+#digitraa-site .svc:hover h3{color:var(--red)}
+/* PROJECTS */
+#digitraa-site .grid{display:grid;grid-template-columns:repeat(6,1fr);gap:4px}
+#digitraa-site .pj{position:relative;grid-column:span 2;aspect-ratio:4/5;overflow:hidden;background:var(--ch)}
+#digitraa-site .pj:nth-child(1),#digitraa-site .pj:nth-child(4){grid-column:span 3;aspect-ratio:16/10}
+#digitraa-site .art{position:absolute;inset:0;filter:grayscale(1) contrast(1.15);transition:transform .8s,filter .6s;background-size:cover;background-position:center}
+#digitraa-site .art img{width:100%;height:100%;object-fit:cover}
+#digitraa-site .pj:hover .art{transform:scale(1.07);filter:grayscale(.2) contrast(1.1)}
+#digitraa-site .a1{background:repeating-linear-gradient(90deg,#1d1d1d 0 38px,#0c0c0c 38px 40px),linear-gradient(#222,#000)}
+#digitraa-site .a2{background:linear-gradient(transparent 62%,#E1060066),repeating-linear-gradient(0deg,#181818 0 22px,#0a0a0a 22px 24px)}
+#digitraa-site .a3{background:radial-gradient(circle at 70% 30%,#E10600aa,transparent 40%),linear-gradient(135deg,#1e1e1e,#060606)}
+#digitraa-site .a4{background:conic-gradient(from 200deg at 30% 70%,#0a0a0a,#2a2a2a,#0a0a0a 40%,#E1060055 60%,#0a0a0a)}
+#digitraa-site .a5{background:repeating-linear-gradient(45deg,#161616 0 14px,#0a0a0a 14px 28px),linear-gradient(#000,#E1060033)}
+#digitraa-site .a6{background:linear-gradient(100deg,transparent 40%,#E1060088 41% 43%,transparent 44%),linear-gradient(#202020,#050505)}
+#digitraa-site .cap{position:absolute;left:0;right:0;bottom:0;padding:1.2rem;background:linear-gradient(transparent,#050505f0)}
+#digitraa-site .cap h3{font-size:1.15rem;line-height:1.1;margin-bottom:.4rem}
+#digitraa-site .cap span{font-size:.72rem;letter-spacing:.12em;color:var(--red)}
+/* SEO */
+#digitraa-site .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem}
+#digitraa-site .cols h3{font-size:1.3rem;margin-bottom:.8rem;color:var(--red)}
+/* CONTACT */
+#digitraa-site .links{display:grid;grid-template-columns:repeat(2,1fr);gap:4px;margin-top:2rem}
+#digitraa-site .links a{display:flex;justify-content:space-between;padding:1.6rem;border:1px solid var(--gr);text-decoration:none;font:600 1rem Sora,Arial,sans-serif;transition:.3s}
+#digitraa-site .links a:hover{background:var(--red);border-color:var(--red)}
+#digitraa-site footer{padding:2rem clamp(1rem,4vw,3rem);border-top:1px solid var(--gr);color:var(--mu);font-size:.8rem}
+@media (max-width:860px){
+ #digitraa-site .about,#digitraa-site .svc,#digitraa-site .cols,#digitraa-site .links{grid-template-columns:1fr}
+ #digitraa-site .grid{grid-template-columns:1fr 1fr}
+ #digitraa-site .pj,#digitraa-site .pj:nth-child(1),#digitraa-site .pj:nth-child(4){grid-column:span 2;aspect-ratio:4/3}
+ #digitraa-site .ws{width:90vw;bottom:2vh;opacity:.22}
+ #digitraa-site .nav .logo{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+ #digitraa-site *{transition:none!important;animation:none!important}
+ #digitraa-site.js .word,#digitraa-site.js .rv{opacity:1;transform:none}
+}
+</style>
+
+<div id="digitraa-site">
+<canvas id="dg-fx" aria-hidden="true"></canvas>
+<div class="leak" style="top:-15vw;right:-15vw"></div>
+
+<!-- ============ NAVIGATION (edit links here) ============ -->
+<header class="nav">
+ <a class="logo" href="#home" aria-label="DIGITRAA home">DIGITRA<b>A</b></a>
+ <nav aria-label="Main"><ul>
+  <li><a class="l" href="#home">Home</a></li><li><a class="l" href="#about">About</a></li>
+  <li><a class="l" href="#services">Services</a></li><li><a class="l" href="#projects">Projects</a></li>
+  <li><a class="l" href="#seo">SEO</a></li><li><a class="l" href="#contact">Contact</a></li>
+ </ul></nav>
+</header>
+
+<main>
+<!-- ============ HERO (editable headline, copy, buttons) ============ -->
+<div class="hero" id="home">
+ <div class="stage">
+  <p class="tag">DIGITAL MARKETING • CONTENT • STRATEGY</p>
+  <h1 id="dg-h1" aria-label="Make your brand impossible to ignore."><span class="ln">MAKE YOUR BRAND</span><span class="ln">IMPOSSIBLE TO IGNORE.</span></h1>
+  <p class="hero-copy">DIGITRAA explores the power of digital marketing, creative content and strategic communication to help brands connect with the right audience and build a stronger online presence.</p>
+  <div class="btns"><a class="btn p" href="#projects">EXPLORE MY WORK</a><a class="btn s" href="#contact">LET’S CONNECT</a></div>
+  <!-- Hero visual: to use a photo, put a URL in data-img (or upload to WordPress Media and paste its URL) -->
+  <div class="ws" role="img" aria-label="Dark digital marketing workspace with analytics dashboards and red light streaks" data-img="" data-alt="Digital marketer working in front of multiple analytics screens">
+   <div class="scr"><i style="left:8%;height:30%"></i><i style="left:22%;height:55%"></i><i style="left:36%;height:42%"></i><i style="left:50%;height:75%"></i><i style="left:64%;height:60%"></i></div>
+   <div class="scr"><i style="left:10%;height:20%"></i><i style="left:30%;height:48%"></i><i style="left:50%;height:35%"></i></div>
+   <div class="scr"><i style="left:12%;height:62%"></i><i style="left:40%;height:30%"></i><i style="left:68%;height:80%"></i></div>
+   <span class="streak" style="top:30%;left:-10%"></span><span class="streak" style="top:70%;left:20%"></span>
+  </div>
+  <span class="scroll-hint">SCROLL</span>
+ </div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section class="sec" id="about"><div class="wrap about">
+ <h2 class="split">BEHIND THE STRATEGY.</h2>
+ <div class="rv">
+  <p>I’m an aspiring digital marketer in Calicut, building practical skills in social media marketing, content creation, SEO fundamentals, search engine marketing and video editing.</p>
+  <p>I’m learning by researching, planning and creating. Good online marketing starts with understanding people: who they are, what they search for and what makes them stop scrolling.</p>
+  <p class="note">Transparency: the projects on this site are concept and practice projects made for learning. They are not client campaigns, and they don’t show real performance results.</p>
+ </div>
+</div></section>
+
+<!-- ============ SERVICES (edit titles and descriptions) ============ -->
+<section class="sec" id="services"><div class="wrap">
+ <h2 class="split">WHAT I CAN DO.</h2>
+ <div class="svc rv"><h3>Social Media Marketing</h3><p>Content calendars, platform-fit posts and community-minded ideas that help a brand show up consistently on Instagram, Facebook and LinkedIn.</p></div>
+ <div class="svc rv"><h3>Search Engine Optimization (SEO)</h3><p>Keyword research, on-page basics and clear site structure, so the right people can find helpful content through search.</p></div>
+ <div class="svc rv"><h3>Search Engine Marketing (SEM)</h3><p>Planning search campaigns around real search intent, with ad copy that matches what people are looking for.</p></div>
+ <div class="svc rv"><h3>Meta Ads and Google Ads Fundamentals</h3><p>Understanding audiences, budgets, creatives and tracking basics across Meta Ads and Google Ads before a single rupee is spent.</p></div>
+ <div class="svc rv"><h3>Content Strategy and Copywriting</h3><p>Clear messaging, honest headlines and an online marketing strategy that connects content to a goal.</p></div>
+ <div class="svc rv"><h3>Creative Content and Video Editing</h3><p>Short-form video, reels and visual storytelling edited for attention, rhythm and brand tone.</p></div>
+ <div class="svc rv"><h3>Digital Marketing Research and Analytics</h3><p>Competitor and audience research, plus reading analytics to learn what is working and what to test next.</p></div>
+</div></section>
+
+<!-- ============ PROJECTS (all concept / practice work; add images via data-img) ============ -->
+<section class="sec" id="projects"><div class="wrap">
+ <h2 class="split">SELECTED CONCEPTS.</h2>
+ <div class="grid">
+  <article class="pj rv"><div class="art a1" role="img" aria-label="Social media campaign concept in monochrome with red accent" data-img="" data-alt="Social media campaign concept"></div><div class="cap"><h3>Social Media Campaign</h3><span>CONCEPT PROJECT</span></div></article>
+  <article class="pj rv" style="--d:.1s"><div class="art a2" role="img" aria-label="SEO research and search visibility concept" data-img="" data-alt="SEO research concept"></div><div class="cap"><h3>SEO Visibility Research</h3><span>PRACTICE PROJECT</span></div></article>
+  <article class="pj rv" style="--d:.2s"><div class="art a3" role="img" aria-label="Google Ads and paid advertising concept" data-img="" data-alt="Google Ads concept"></div><div class="cap"><h3>Google Ads Concept</h3><span>CONCEPT PROJECT</span></div></article>
+  <article class="pj rv"><div class="art a4" role="img" aria-label="Meta advertising creative concept" data-img="" data-alt="Meta ads creative concept"></div><div class="cap"><h3>Meta Ads Creative</h3><span>CONCEPT PROJECT</span></div></article>
+  <article class="pj rv" style="--d:.1s"><div class="art a5" role="img" aria-label="Content creation and video editing practice" data-img="" data-alt="Video editing practice"></div><div class="cap"><h3>Reel and Video Edit</h3><span>PRACTICE PROJECT</span></div></article>
+  <article class="pj rv" style="--d:.2s"><div class="art a6" role="img" aria-label="Website and digital analytics concept" data-img="" data-alt="Analytics dashboard concept"></div><div class="cap"><h3>Analytics Dashboard</h3><span>PRACTICE PROJECT</span></div></article>
+ </div>
+</div></section>
+
+<!-- ============ SEO CONTENT ============ -->
+<section class="sec" id="seo"><div class="wrap">
+ <h2 class="split">DIGITAL MARKETER IN CALICUT.</h2>
+ <p class="rv">DIGITRAA is a digital marketing portfolio from Calicut. It brings together digital marketing services in Calicut at a learning stage: social media marketing, SEO services in Calicut, Google Ads and Meta Ads fundamentals, and content creation and video editing. Every project here shows how I think and work, not guaranteed results.</p>
+ <div class="cols">
+  <div class="rv"><h3>Search visibility</h3><p>SEO starts with understanding what people type into Google and building pages that answer it well.</p></div>
+  <div class="rv" style="--d:.1s"><h3>Google Ads and Meta Ads</h3><p>Paid campaigns work best with a clear audience, a sharp message and careful measurement.</p></div>
+  <div class="rv" style="--d:.2s"><h3>Online marketing strategy</h3><p>Content, search and social should work together, guided by goals instead of guesses.</p></div>
+ </div>
+</div></section>
+
+<!-- ============ CONTACT (your details added) ============ -->
+<section class="sec" id="contact"><div class="wrap">
+ <h2 class="split">LET’S MAKE SOMETHING MATTER.</h2>
+ <div class="links">
+  <a class="rv" href="mailto:muhammedsalim4342@gmail.com"><span>Email</span><span>muhammedsalim4342@gmail.com</span></a>
+  <a class="rv" href="https://wa.me/919995194342" target="_blank" rel="noopener"><span>WhatsApp</span><span>+91 99951 94342</span></a>
+  <a class="rv" href="https://instagram.com/speak_2_speak/" target="_blank" rel="noopener"><span>Instagram</span><span>@speak_2_speak</span></a>
+  <a class="rv" href="https://www.linkedin.com/in/muhammed-salim-undefined-6bb3b8437" target="_blank" rel="noopener"><span>LinkedIn</span><span>Muhammed Salim</span></a>
+ </div>
+</div></section>
+</main>
+<footer>© DIGITRAA. Digital marketer in Calicut. Projects shown are concept or practice work.</footer>
+</div>
+
+<script>
+/* ============ BEHAVIOUR (scroll-driven break-apart system) ============ */
+(function(){
+ var root=document.getElementById('digitraa-site'); if(!root) return;
+ var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ var $=function(s,c){return Array.prototype.slice.call((c||root).querySelectorAll(s))};
+ var clamp=function(v){return Math.max(0,Math.min(1,v))};
+ root.classList.add('js');
+
+ /* optional photos: set data-img="URL" on .ws or .art elements */
+ $('[data-img]').forEach(function(el){
+  var u=el.getAttribute('data-img'); if(!u) return;
+  var im=new Image(); im.src=u; im.alt=el.getAttribute('data-alt')||''; im.loading=el.classList.contains('ws')?'eager':'lazy';
+  el.innerHTML=''; el.appendChild(im);
+ });
+
+ /* split hero headline into letters */
+ var letters=[];
+ $('#dg-h1 .ln').forEach(function(ln){
+  var t=ln.textContent; ln.textContent='';
+  t.split(' ').forEach(function(w,wi,arr){
+   var wd=document.createElement('span'); wd.style.cssText='display:inline-block;white-space:nowrap'; wd.setAttribute('aria-hidden','true');
+   w.split('').forEach(function(c){
+    var s=document.createElement('span'); s.className='ch'; s.textContent=c; wd.appendChild(s);
+    letters.push({el:s,dx:(Math.random()-.5)*700,dy:260+Math.random()*700,r:(Math.random()-.5)*600});
+   });
+   ln.appendChild(wd); if(wi<arr.length-1) ln.appendChild(document.createTextNode(' '));
+  });
+ });
+
+ /* split section headings into words that fly in */
+ $('.split').forEach(function(h){
+  var words=h.textContent.trim().split(/\s+/); h.setAttribute('aria-label',h.textContent.trim()); h.textContent='';
+  words.forEach(function(w,i){
+   var s=document.createElement('span'); s.className='word'; s.setAttribute('aria-hidden','true'); s.textContent=w+' ';
+   s.style.setProperty('--x',((Math.random()-.5)*300).toFixed(0)+'px');
+   s.style.setProperty('--r',((Math.random()-.5)*40).toFixed(0)+'deg');
+   s.style.setProperty('--d',(i*0.09).toFixed(2)+'s'); h.appendChild(s);
+  });
+ });
+
+ /* lightweight particle layer (capped, only runs while alive) */
+ var cv=document.getElementById('dg-fx'),cx=cv.getContext('2d'),P=[],run=false,W=0,H=0;
+ function size(){var d=Math.min(window.devicePixelRatio||1,2);W=cv.width=innerWidth*d;H=cv.height=innerHeight*d;cx.setTransform(d,0,0,d,0,0)}
+ size(); addEventListener('resize',size);
+ function burst(x,y,n,spread){
+  if(reduce) return; n=Math.min(n,Math.max(0,90-P.length));
+  for(var i=0;i<n;i++) P.push({x:x+(Math.random()-.5)*spread,y:y,vx:(Math.random()-.5)*5,vy:-Math.random()*4,l:1,s:1+Math.random()*3,c:Math.random()<.65?'225,6,0':'255,255,255',sh:Math.random()<.4});
+  if(!run){run=true;requestAnimationFrame(tick)}
+ }
+ function tick(){
+  cx.clearRect(0,0,innerWidth,innerHeight);
+  for(var i=P.length-1;i>=0;i--){var p=P[i];p.vy+=.18;p.x+=p.vx;p.y+=p.vy;p.l-=.018;
+   if(p.l<=0||p.y>innerHeight+20){P.splice(i,1);continue}
+   cx.fillStyle='rgba('+p.c+','+p.l+')';cx.shadowColor='rgba(225,6,0,.8)';cx.shadowBlur=6;
+   if(p.sh){cx.fillRect(p.x,p.y,p.s*2.5,p.s*.8)}else{cx.fillRect(p.x,p.y,p.s,p.s)}}
+  if(P.length){requestAnimationFrame(tick)}else{run=false;cx.clearRect(0,0,innerWidth,innerHeight)}
+ }
+
+ /* scroll-progress: hero letters fragment and fall; reversible */
+ var hero=document.getElementById('home'),h1=document.getElementById('dg-h1'),stage=hero.querySelector('.stage'),
+     copy=$('.hero-copy,.btns,.tag,.scroll-hint,.ws'),ticking=false,lastP=0;
+ function update(){
+  ticking=false; var vh=innerHeight, top=hero.getBoundingClientRect().top, span=hero.offsetHeight-vh;
+  var p=reduce?0:clamp(-top/Math.max(span*.85,1)), n=letters.length;
+  letters.forEach(function(L,i){
+   var q=clamp((p-(i/n)*.3)/.7), e=q*q;
+   L.el.style.transform=q?'translate('+(L.dx*q).toFixed(1)+'px,'+(L.dy*e).toFixed(1)+'px) rotate('+(L.r*q).toFixed(1)+'deg)':'';
+   L.el.style.opacity=(1-e*.95).toFixed(2);
+  });
+  copy.forEach(function(el){el.style.opacity=(1-clamp(p*1.6)).toFixed(2)});
+  if(p>.02&&p<.95&&Math.abs(p-lastP)>.004){var r=h1.getBoundingClientRect();burst(r.left+Math.random()*r.width,r.top+r.height*(.3+p*.6),3,60)}
+  lastP=p;
+ }
+ addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(update)}},{passive:true});
+ addEventListener('resize',update); update();
+
+ /* staggered reveals; removed again when scrolling back up */
+ if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+   var t=e.target;
+   if(e.isIntersecting){t.classList.add('in'); if(t.classList.contains('split')){var r=t.getBoundingClientRect();burst(r.left+r.width/3,r.top+r.height/2,14,r.width/2)}}
+   else{var r2=e.boundingClientRect; if(r2.top>0){t.classList.remove('in')} else if(t.classList.contains('split')){burst(r2.left+r2.width/3,Math.max(r2.bottom,10),10,r2.width/2)}}
+  })},{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+  $('.rv,.split').forEach(function(el){io.observe(el)});
+ } else { $('.rv,.split').forEach(function(el){el.classList.add('in')}); }
+
+ /* smooth anchor navigation (leaves keyboard + native scrolling untouched) */
+ $('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(ev){
+  var t=document.querySelector(a.getAttribute('href')); if(!t) return; ev.preventDefault();
+  t.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});
+ })});
+})();
+</script>
